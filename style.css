@@ -39,6 +39,7 @@ main{
     margin-top: 100px;
     color: white;
     font-size: 30px;
+    width: 200vw;
 }
 
 .item{
@@ -78,7 +79,7 @@ main{
     }
 
     to{
-        left: -50px;
+        left: -200%;
     }
 }
 
