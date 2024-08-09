@@ -8,6 +8,7 @@ body{
     background-image: url(./assets/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 main{
@@ -15,6 +16,7 @@ main{
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    overflow: hidden;
 }
 
 .container{
@@ -47,8 +49,8 @@ main{
     height: var(--height);
     position: absolute;
     left: 100%;
-    animation: autoRun 10s linear infinite;
-    animation-delay: calc( 30 / var(--quantity) * var(--delay)) !important;
+    animation: autoRun 30s linear infinite;
+    animation-delay: calc( 20 / var(--quantity) * var(--delay)) !important;
     cursor: pointer;
 }
 
@@ -62,6 +64,8 @@ main{
 .item img{
     width: 200px;
     height: 200px;
+    border: 3px solid black;
+    border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
 }
 
 .container:hover .item {
@@ -79,16 +83,53 @@ main{
     }
 
     to{
-        left: -200%;
+        left: -100vw;
     }
 }
 
 @keyframes reverseRun {
     from{
-        left: -200px;
+        left: -10vw;
     }
 
     to{
         left: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+            .container .item p {
+                color: #000;
+                font-weight: bolder;
+                width: 700vw;
+                font-size: 30px;
+                margin-top: 50px;
+            }
+
+            .item img {
+                width: 150px;
+                height: 150px;
+                border: 3px solid black;
+                border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
+            }
+
+            @keyframes autoRun {
+                from{
+                    left: 100%;
+                }
+            
+                to{
+                    left: -100vw;
+                }
+            }
+            
+            @keyframes reverseRun {
+                from{
+                    left: -100vw;
+                }
+            
+                to{
+                    left: 100%;
+                }
+            }
+        }
