@@ -38,10 +38,13 @@ main{
 
 
 .container .item p{
-    margin-top: 100px;
-    color: white;
     font-size: 30px;
+    margin-top: 100px;
     width: 200vw;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #ec0173, #ec0173); /* Degradê do texto */
+    -webkit-background-clip: text; /* Recorta o fundo para o texto */
+    color: transparent; /* Torna o texto transparente para mostrar o degradê */
 }
 
 .item{
@@ -83,7 +86,7 @@ main{
     }
 
     to{
-        left: -100vw;
+        left: -150vw;
     }
 }
 
@@ -98,38 +101,42 @@ main{
 }
 
 @media screen and (max-width: 768px) {
-            .container .item p {
-                color: #000;
-                font-weight: bolder;
-                width: 700vw;
-                font-size: 30px;
-                margin-top: 50px;
-            }
+    .container .item p {
+        margin-top: 50px;
+        width: 700vw;
+        font-size: 30px;
+        font-weight: bolder;
+    }
 
-            .item img {
-                width: 150px;
-                height: 150px;
-                border: 3px solid black;
-                border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
-            }
+    .item img {
+        width: 150px;
+        height: 150px;
+        border: 3px solid black;
+        border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
+    }
 
-            @keyframes autoRun {
-                from{
-                    left: 100%;
-                }
+    .item{
+        animation: autoRun 25s linear infinite; 
+    }
             
-                to{
-                    left: -100vw;
-                }
-            }
-            
-            @keyframes reverseRun {
-                from{
-                    left: -100vw;
-                }
-            
-                to{
-                    left: 100%;
-                }
-            }
+
+    @keyframes autoRun {
+        from{
+            left: 100%;
         }
+            
+        to{
+            left: -430vw;
+        }
+    }
+            
+    @keyframes reverseRun {
+        from{
+            left: -100vw;
+        }
+        
+        to{
+            left: 100%;
+        }
+    }
+}
