@@ -6,7 +6,7 @@
 
 body{
     background-image: url(./assets/fundo.jpg);
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: cover;
     height: 100vh;
 }
@@ -101,6 +101,7 @@ main{
 }
 
 @media screen and (max-width: 768px) {
+
     .container .item p {
         margin-top: 50px;
         width: 700vw;
@@ -126,7 +127,7 @@ main{
         }
             
         to{
-            left: -430vw;
+            left: -500vw;
         }
     }
             
