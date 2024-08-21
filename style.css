@@ -40,7 +40,7 @@ main{
 .container .item p{
     font-size: 30px;
     margin-top: 100px;
-    width: 200vw;
+    width: 300vw;
     font-weight: bold;
     background-image: linear-gradient(to left, #ec0173, #ec0173); /* Degradê do texto */
     -webkit-background-clip: text; /* Recorta o fundo para o texto */
