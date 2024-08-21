@@ -71,15 +71,6 @@ main{
     border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
 }
 
-.container:hover .item {
-    animation-play-state: paused;
-    filter: grayscale(1);
-}
-
-.container .item:hover {
-    filter: grayscale(0);
-}
-
 @keyframes autoRun {
     from{
         left: 100%;
